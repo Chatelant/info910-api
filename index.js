@@ -1,21 +1,25 @@
+// server.js
 const express = require('express');
+const cors = require('cors');
 const app = express();
+app.use(cors());
+/* server configuration here */
 
 app.listen(3000, () =>console.log("Serveur à l'écoute"))
 
-app.get('/', (req, res) => {
-  return res.send('Received a GET HTTP method');
+app.get('/api', (req, res) => {
+  return res.send('message : Received a GET HTTP method');
 });
 
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
   return res.send('Received a POST HTTP method');
 });
 
-app.put('/', (req, res) => {
+app.put('/api', (req, res) => {
   return res.send('Received a PUT HTTP method');
 });
 
-app.delete('/', (req, res) => {
+app.delete('/api', (req, res) => {
   return res.send('Received a DELETE HTTP method');
 });
 
