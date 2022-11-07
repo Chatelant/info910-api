@@ -8,7 +8,7 @@ app.use(cors());
 app.listen(3000, () =>console.log("Serveur à l'écoute"))
 
 app.get('/api', (req, res) => {
-  return res.send('message : Received a GET HTTP method');
+  return res.send('Received a GET HTTP method');
 });
 
 app.post('/api', (req, res) => {
